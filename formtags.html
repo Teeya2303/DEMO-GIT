@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 
+    </title>
+</head>
+<body bgcolor="black" text="yellow">
+    <section>
+        <form action="welcome.html" method="post" enctype="multipart/form-data" novalidate autocomplete="off">
+
+<!-- novalidate is used to make the labels with no validation so even if we dont type anything it will submit
+ autocomplete is used to off all the suggestions given while filling a form  -->
+
+            <!-- there are 2 types of methods
+             1.get method in this we information is not confidential,limited data 
+             2.Post - confidentiatial ,unlimited amount of data, this can be opened in offline server   -->
+
+            <!-- fieldset is used to give a border to the form and legend is used to give a name to the form -->
+            <fieldset>
+                <legend align="center">Registration Form</legend>
+            <div>
+                <label for="un">Username</label>
+                <input type="text" id="un" name="un" required maxlength="15" minlength="2" autofocus disabled>
+                <!-- autofocus is used to automatically focus on the first box , disabled is used to disable that label  -->
+                
+            </div> <br>
+             <div>
+                <label for="em">Email</label>
+                <input type="email" id="em" required readonly value="teeya@gmail.com">
+                <!-- readonly , value is the actual one which is submitted to the background details  -->
+            </div> <br> 
+            <div>
+                <label for="ps">Password</label>
+                <input type="password" id="ps" name="ps" required placeholder="enter your password">
+            </div> <br>
+            <div>
+                <label for="file">upload resume</label>
+                <input type="file" name="file" id="file" required>
+            </div><br>
+
+            <div>
+                <label for="dob">DOB</label>
+                <input type="date" name="dob" id="dob" min="2024-09-04" max="2024-09-08" required>
+            </div><br>
+
+            <div>
+                <label for="dt">Date and Time</label>
+                <input type="datetime-local" name="dt" id="dt" required>
+            </div><br>
+
+            <div>
+                <label for="t">Time</label>
+                <input type="time" name="time" id="t" required>
+            </div><br>
+            <div>
+                <label for="w">week</label>
+                <input type="week" name="week" id="w" required>
+            </div><br>
+            <div>
+                <label for="mon">month</label>
+                <input type="month" name="mon" id="mon" required>
+            </div>
+
+            <div>
+                <label for="city">Select City</label>
+                <select name="city" id="city" required>
+<!-- id cannot be same -->
+                   <option value="unknown">--select--</option> 
+                   <!-- select attribute is used to automatically select the option in which option tag its written -->
+                   <option value="mumbai" selected>mumbai</option>
+                   <option value="pune">pune</option>
+                   <option value="banglore">banglore</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">color</label>
+                <input type="color">
+            </div><br>
+
+            <div>
+                <label for="">range</label>
+                <input type="range">
+            </div><br>
+
+            <!-- radio button to select any one option -->
+            <div>
+                Gender
+                <input type="radio" id="gen" name="gender" checked value="Male">
+                <!-- checked attribute is used to automatically check the option in which input tag its written -->
+                <label for="gen">Male</label>
+
+                <!-- name should be same  for both the radio button so that only one option is enabled-->
+                <input type="radio" id="gen" name="gender"value="female">
+                <label for="gen">Female</label>
+
+            </div>
+
+            <div>
+                select your skills:<br>
+                <input type="checkbox" checked disabled>
+                <!-- checked and disabled are used for already to keep it checked and disabled is used to disable that option  -->
+                 <label >HTML5</label>
+                 <input type="checkbox" checked disabled>
+                 <label >CSS3</label>
+                 <input type="checkbox" >
+                 <label for="">JAVA</label>
+                 <input type="checkbox" name="" id="">
+                 <label for="">Python</label>
+            </div><br>
+
+            <div>
+                <label for="">Address</label>
+                <textarea rows="3" cols="22"></textarea>
+            </div><br>
+
+            <div>
+                <label for="">Search</label>
+                <input type="search">
+            </div><br>
+
+            <div>
+                <label for="">Hidden Input</label>
+                <input type="hidden">
+            </div><br>
+
+            <div>
+                <label for="courses">select courses</label>
+                <select >
+                    <!-- <select multiple> - This can be used to select multiple options
+                         but we have to select by pressing ctrl key simulta-- -->
+                         
+                         <optgroup label="Science">
+                            <option value="bsc">Bsc</option>
+                            <option value="IT">BSc.IT</option>
+                            <option value="CS">BSC.CS</option>
+                         </optgroup>
+                         <optgroup label="Commerce">
+                            <option value="bcom">Bcom</option>
+                            <option value="BAF">BAF</option>
+
+                         </optgroup>
+                         <optgroup label="Arts">
+                            <option value="BA">BA</option>
+                         </optgroup>
+                </select>
+            </div><br>
+
+            <div>
+                <label for="">hobbies:</label>
+                <input list="games">
+                <!-- list and id value should be same name. -->
+                <datalist id="games">
+                    <option value="cricket">
+                    <option value="tennis">
+                    <option value="football">
+                    <option value="chess">
+                </datalist>
+            </div><br>
+
+            
+
+
+            <!-- name attribute is used when we want to displY IT IN OUTPUT SCREEN while using get method -->
+            <!-- <div>
+                <label for="age">Age</label>
+                <input type="number" id="age" min="18" max="40" required>
+            </div>
+            <div>
+                <label for="url">URL</label>
+                <input type="url" id="url" required>
+            </div><br>
+            <div>
+                <label for="no">Phone Number</label>
+                <input type="tel" id="no" required pattern="[0-9] {10}" maxlength="10">
+            </div><br> -->
+            <!-- Their are 3 types of button
+             1.submit
+             2.reset
+             3.button (can be used more than once)
+             we can create a button using input tag and button tag as well -->
+             <button type="submit">
+                Submit
+             </button>
+             <input type="button" value="login">
+             <input type="reset" value="clear">
+            </fieldset>
+        </form>
+        
+    </section>
+</body>
+</html>
